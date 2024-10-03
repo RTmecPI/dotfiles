@@ -1,7 +1,8 @@
 # dotfiles
 
-![Static Badge](https://img.shields.io/badge/bash_zsh-x?logo=linux&label=linux&color=%23FCC624)
-![Static Badge](https://img.shields.io/badge/zsh-x?logo=apple&label=macOS&color=%23000000)
+![Static Badge](https://img.shields.io/badge/linux-x?logo=linux&color=%23FCC624)
+![Static Badge](https://img.shields.io/badge/macOS-x?logo=apple&color=%23000000)
+![Static Badge](https://img.shields.io/badge/bash%2C%20zsh-x?label=shell)
 
 I prefer declarative, platform agnostic configuration with templating over shell
 scripting. I mainly use my dotfiles on development servers, notebooks,
