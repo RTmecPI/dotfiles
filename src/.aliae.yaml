@@ -1,0 +1,22 @@
+alias:
+  # reinitialize aliae from the command line
+  - name: reinitAliae
+    type: function
+    value: eval "$($USERBIN/aliae init {{ .Shell }})"
+
+env:
+  - name: POSH_THEME
+    value: "{{ .Home }}/.mytheme.omp.json"
+  - name: USERBIN
+    value: "{{ .Home }}/.local/bin"
+path:
+  - value: |
+      {{ env "USERBIN" }}
+script:
+  # initialize oh-my-posh
+  - value: |
+      eval "$($USERBIN/oh-my-posh init {{ .Shell }})"
+    if: match .Shell "bash" "zsh"
+  # git alias to push to all remotes
+  - value: |
+      git config --global alias.pushall '!git remote | xargs -L1 git push'
