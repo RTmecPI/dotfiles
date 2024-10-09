@@ -102,6 +102,9 @@ remoteAddToken() {
     git remote set-url $remote $urlWithToken
 }
 
+# change access rights of local git config before adding the token
+chmod 600 .git/config
+
 if [ -n "$configOriginToken" ]
 then
     remoteAddToken origin $originToken
